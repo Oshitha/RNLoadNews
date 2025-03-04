@@ -74,7 +74,7 @@ export default function Index() {
 
           <View style={styles.nextIcon}>
             <TouchableOpacity onPress={() => navigateToNotificationsView()}>
-              <Image style={styles.nextImg} source={!fName.trim() || !lName.trim() ? require('@/assets/images/next-inactive.png') : require('@/assets/images/nextIcon.png')} />
+              <Image style={styles.nextImg} source={!fName.trim() || !lName.trim() ? require('../assets/images/next-inactive.png') : require('../assets/images/nextIcon.png')} />
             </TouchableOpacity>
           </View>
 

@@ -7,7 +7,7 @@ import styles from './styles';
 import NewsCard from '../../components/news-card';
 import { COLORS } from '../../config/colors';
 import { getUser } from './../../utils/storage';
-import { CONSTANT } from '@/app/utils/constant';
+import { CONSTANT } from '../../utils/constant';
 
 const DashboardView = () => {
 

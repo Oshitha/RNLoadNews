@@ -16,7 +16,7 @@ const NewsCard: React.FC<Props> = ({ newsArticle, onPress }) => {
             <View style={styles.newsCardContainer}>
                 <View style={styles.newsImageView}>
                     {hasValidImage ? <Image source={{ uri: newsArticle.image }} style={styles.newsImage} /> :
-                        <Image style={styles.newsImage} source={require('@/assets/images/defalut-logo.png')} />
+                        <Image style={styles.newsImage} source={require('../../../assets/images/defalut-logo.png')} />
                     }
                 </View>
                 <View style={styles.newsDescriptionView}>

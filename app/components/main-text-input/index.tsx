@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput } from 'react-native';
 import styles from './styles';
-import { COLORS } from '@/app/config/colors';
+import { COLORS } from '../../../app/config/colors';
 
 interface Props {
     placeholder: string;

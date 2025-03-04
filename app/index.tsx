@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, KeyboardAvoidingView, TouchableOpacity, Image } from "react-native";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import Toast from "react-native-toast-message";
 import styles from './styles';
 import LandingHeader from './components/landing-header';
 import LandingSubTitle from './components/landing-sub-title';
@@ -18,17 +19,33 @@ export default function Index() {
 
   useEffect(() => {
     const loadUser = async () => {
-      const user = await getUser();
-      if (user) {
-        setFName(user.firstName);
-        setLName(user.lastName);
+      try {
+        const user = await getUser();
+        if (user) {
+          setFName(user.firstName);
+          setLName(user.lastName);
+        }
+      } catch (error) {
+        Toast.show({
+          type: "error",
+          text1: CONSTANT.ERROR,
+          text2: CONSTANT.SOME_THING_WENT_WRONG
+        })
       }
     };
     loadUser();
   }, []);
 
   const handleSave = async () => {
-    await saveUser({ firstName: fName, lastName: lName });
+    try {
+      await saveUser({ firstName: fName, lastName: lName });
+    } catch (error) {
+      Toast.show({
+        type: "error",
+        text1: CONSTANT.ERROR,
+        text2: CONSTANT.FAILED_TO_SAVE_USER,
+      });
+    }
   };
 
   const navigateToNotificationsView = async () => {

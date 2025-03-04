@@ -1,7 +1,10 @@
 import { Stack } from "expo-router";
+import Toast from "react-native-toast-message";
 import { getUser } from './utils/storage';
 import { useState, useEffect } from "react";
 import { useRouter } from 'expo-router';
+import { CONSTANT } from './utils/constant';
+
 export default function RootLayout() {
 
   const router = useRouter();
@@ -12,9 +15,17 @@ export default function RootLayout() {
   useEffect(() => {
 
     const loadUser = async () => {
-      const user = await getUser();
-      if (user) {
-        setIsLoading(true)
+      try {
+        const user = await getUser();
+        if (user) {
+          setIsLoading(true)
+        }
+      } catch (error) {
+        Toast.show({
+          type: "error",
+          text1: CONSTANT.ERROR,
+          text2: CONSTANT.SOME_THING_WENT_WRONG
+        })
       }
     };
 

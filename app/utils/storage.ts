@@ -12,7 +12,7 @@ export const saveUser = async (user: User): Promise<void> => {
         const jsonValue = JSON.stringify(user);
         await AsyncStorage.setItem(USER_STORAGE_KEY, jsonValue);
     } catch (error) {
-        console.error('Error saving user:', error);
+        throw error;
     }
 };
 
@@ -21,7 +21,6 @@ export const getUser = async (): Promise<User | null> => {
         const jsonValue = await AsyncStorage.getItem(USER_STORAGE_KEY);
         return jsonValue ? JSON.parse(jsonValue) : null;
     } catch (error) {
-        console.error('Error retrieving user:', error);
-        return null;
+        throw error;
     }
 };

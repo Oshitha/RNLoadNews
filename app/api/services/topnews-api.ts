@@ -1,4 +1,4 @@
-import { ENV } from "../../config/env";
+import { ENV } from "@config/env";
 import axiosInstance from "../axios-instance";
 import API_ENDPOINTS from "../endpoints";
 

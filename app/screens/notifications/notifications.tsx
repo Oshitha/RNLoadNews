@@ -2,11 +2,11 @@ import React from 'react';
 import { View, Text, Image } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import styles from './styles';
-import LandingSubTitle from '../../components/landing-sub-title';
-import ContinueButton from '../../components/continue-button';
+import LandingSubTitle from '@components/landing-sub-title';
+import ContinueButton from '@components/continue-button';
 import { useRouter } from 'expo-router';
 import * as Notification from "expo-notifications";
-import { CONSTANT } from '../../../app/utils/constant';
+import { CONSTANT } from '@utils/constant';
 
 const Notifications = () => {
 

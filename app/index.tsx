@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { View, KeyboardAvoidingView, TouchableOpacity, Image } from "react-native";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Toast from "react-native-toast-message";
-import styles from './styles';
-import LandingHeader from './components/landing-header';
-import LandingSubTitle from './components/landing-sub-title';
-import MainTextInput from './components/main-text-input';
-import { saveUser, getUser } from './utils/storage';
+import LandingHeader from '@components/landing-header';
+import LandingSubTitle from '@components/landing-sub-title';
+import MainTextInput from '@components/main-text-input';
+import { saveUser, getUser } from '@utils/storage';
 import { useRouter } from 'expo-router';
-import { CONSTANT } from './utils/constant';
+import { CONSTANT } from '@utils/constant';
+import styles from './styles';
 
 export default function Index() {
 

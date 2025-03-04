@@ -1,9 +1,9 @@
 import { Stack } from "expo-router";
 import Toast from "react-native-toast-message";
-import { getUser } from './utils/storage';
+import { getUser } from '@utils/storage';
 import { useState, useEffect } from "react";
 import { useRouter } from 'expo-router';
-import { CONSTANT } from './utils/constant';
+import { CONSTANT } from '@utils/constant';
 
 export default function RootLayout() {
 

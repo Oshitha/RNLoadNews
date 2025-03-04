@@ -1,6 +1,6 @@
 import { StyleSheet, Platform } from 'react-native';
-import { COLORS } from '../../config/colors';
-import { FontFamily, FontSize } from '../../config/fonts';
+import { COLORS } from '@config/colors';
+import { FontFamily, FontSize } from '@config/fonts';
 
 const styles = StyleSheet.create({
 
@@ -18,7 +18,8 @@ const styles = StyleSheet.create({
     errorMsg: {
         color: COLORS.white,
         fontSize: FontSize.ftSize_16,
-        fontFamily: FontFamily.ftFamily_Rubik_Medium
+        fontFamily: FontFamily.ftFamily_Rubik_Medium,
+        paddingTop:30
     },
     fList: {
         marginTop: 30

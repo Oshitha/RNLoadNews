@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { View, ListRenderItem, ActivityIndicator, Text, Linking, FlatList } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import DashboardHeader from '../../components/dashboard-header';
+import DashboardHeader from '@components/dashboard-header';
 import { getTopNews } from '../../api/services/topnews-api';
+import NewsCard from '@components/news-card';
+import { COLORS } from '@config/colors';
+import { getUser } from '@utils/storage';
+import { CONSTANT } from '@utils/constant';
 import styles from './styles';
-import NewsCard from '../../components/news-card';
-import { COLORS } from '../../config/colors';
-import { getUser } from './../../utils/storage';
-import { CONSTANT } from '../../utils/constant';
 
 const DashboardView = () => {
 

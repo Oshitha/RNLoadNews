@@ -10,7 +10,8 @@
       "@components/*": ["app/components/*"],
       "@screens/*": ["app/screens/*"],
       "@utils/*": ["app/utils/*"],
-      "@config/*": ["app/config/*"]
+      "@config/*": ["app/config/*"],
+      "@services/*": ["app/api/services/*"]
     }
   },
   "include": [

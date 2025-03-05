@@ -9,32 +9,25 @@ export default function RootLayout() {
 
   const router = useRouter();
 
-  const [isLoading, setIsLoading] = useState(false);
-
-
   useEffect(() => {
-
     const loadUser = async () => {
       try {
         const user = await getUser();
         if (user) {
-          setIsLoading(true)
+          // Proceed to navigate directly here if user exists
+          router.replace('./screens/dashbaord/dashboard');
         }
       } catch (error) {
         Toast.show({
           type: "error",
           text1: CONSTANT.ERROR,
           text2: CONSTANT.SOME_THING_WENT_WRONG
-        })
+        });
       }
     };
 
     loadUser();
-    if (isLoading) {
-      router.replace('./screens/dashbaord/dashboard');
-    }
-
-  }, [isLoading]);
+  }, []);
 
   return (
     <Stack screenOptions={{ headerShown: false }} >

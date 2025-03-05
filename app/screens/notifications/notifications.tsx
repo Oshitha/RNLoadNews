@@ -26,6 +26,11 @@ const Notifications = () => {
         }
     };
 
+    const onPressContinue = async () => {
+        await requestUserPermission();
+        router.push('../dashbaord/dashboard');
+    }
+
     return (
         <SafeAreaProvider>
             <View style={styles.notificationTopContainer}>
@@ -43,10 +48,7 @@ const Notifications = () => {
                     </View>
                 </View>
                 <View style={styles.notificationButtonContainer}>
-                    <ContinueButton title={CONSTANT.CONTINUE} onPress={async () => {
-                        await requestUserPermission()
-                        router.push('../dashbaord/dashboard');
-                    }} />
+                    <ContinueButton title={CONSTANT.CONTINUE} onPress={onPressContinue} />
                 </View>
             </View>
         </SafeAreaProvider>

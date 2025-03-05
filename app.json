@@ -30,9 +30,9 @@
         "expo-splash-screen",
         {
           "image": "./assets/images/defalut-logo.png",
-          "imageWidth": 200,
+          "imageWidth": 188,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#000000"
         }
       ]
     ],

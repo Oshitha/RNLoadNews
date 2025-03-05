@@ -9,15 +9,19 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.AssignApp"
+      "supportsTablet": false,
+      "bundleIdentifier": "com.anonymous.AssignApp",
+      "infoPlist": {
+        "NSUserNotificationUsageDescription": "We need permission to send you notifications."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/defalut-logo.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.AssignApp"
+      "package": "com.anonymous.AssignApp",
+      "useNextNotificationsApi": true
     },
     "web": {
       "bundler": "metro",

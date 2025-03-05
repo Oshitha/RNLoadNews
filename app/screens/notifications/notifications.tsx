@@ -16,7 +16,6 @@ const Notifications = () => {
         try {
             // Request notification permissions
             const { status } = await Notification.requestPermissionsAsync();
-
             if (status == "granted") {
                 return true;
             } else {

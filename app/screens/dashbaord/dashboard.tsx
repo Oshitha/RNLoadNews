@@ -20,12 +20,12 @@ const DashboardView = () => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-
                 const user = await getUser();
                 if (user) setUserName(user.firstName);
 
                 const news = await getTopNews();
                 setNews(news);
+
             } catch {
                 setError(true);
             } finally {
